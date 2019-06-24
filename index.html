@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>用户事件的行为</title>
+		<style>
+			#clock{
+				width: 200px;
+				height: 200px;
+				text-align: center;
+				line-height: 200px;
+				background: #00BFFF;
+				color: black;
+				font-size: 50px;
+				margin: 10px auto;
+			}
+			#btnButton{
+				width: 80px;
+				height: 23px;
+				float: left;
+				margin-right: 10px;
+			}
+			.box{
+				width: 400px;
+				margin: 50px auto;
+				text-align: center;
+				border: 1px solid #ccc;
+			}
+			.box a{
+				text-align: center;
+				line-height: 50px;
+				display: block;
+				color: palevioletred;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="clock"></div>
+		<input id="btnButton" type="button" name="" value="点我呀">
+		<input type="text" name="">
+		<div class="box">
+			<a href="index.html">点击跳转到index</a>
+			<a href="demo01.html">点击demo01</a>
+		</div>
+		<script type="text/javascript">
+			var btn = document.getElementById("btnButton");
+			var clock = document.getElementById("clock");
+			var isshow = true;
+			btn.onclick = function(){
+				if(isshow == true){
+					clock.style.display="none";
+					isshow = false;
+				}else{
+					clock.style.display="block";
+					isshow = true;
+				}
+			}
+		</script>
+	</body>
+</html>
